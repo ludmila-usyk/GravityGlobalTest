@@ -1,0 +1,108 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #12121275;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    .modal {
+        background-color: #FFFFFF;
+        color: #121212;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 320px;
+        height: 170px;
+        transform: translate(-50%, -50%);
+        padding: 25px 20px;
+        box-sizing: border-box;
+        .modal-title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+            padding-bottom: 18px;
+        }
+        .modal-message {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
+            .modal-message_clicked {
+                font-weight: 600;
+            }
+        }
+        .modal-btn {
+            top: 15px;
+            right: 15px;
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #121212;
+            border: none;
+            background-color: white;
+            &:hover,
+            &:focus {
+                background-color: #6ddfe7;
+                color: #E4C1AE;
+            }
+        }
+        .modal-message_clicked {
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .backdrop {
+        .modal {
+            min-width: 600px;
+            min-height: 200px;
+            padding: 40px 65px;
+            .modal-message {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+            }
+            .modal-btn {
+                top: 15px;
+                right: 15px;
+            }
+        }
+    }
+}
+    
+@media screen and (min-width: 1200px) {
+    .backdrop {
+        .modal {
+            min-width: 920px;
+            min-height: 210px;
+            .modal-title {
+                font-weight: 700;
+                font-size: 42px;
+                line-height: 120%;
+                padding-bottom: 24px;
+            }
+            .modal-message {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 150%;
+            }
+            .modal-btn {
+                top: 40px;
+                right: 40px;
+            }
+        }
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

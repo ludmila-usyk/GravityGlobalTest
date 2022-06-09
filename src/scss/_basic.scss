@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body {
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: #121212;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 767px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 230px;
+    padding-right: 230px;
+  }
+}
